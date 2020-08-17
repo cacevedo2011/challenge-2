@@ -1,0 +1,398 @@
+*{/*This basically selects all the elements*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #5C5346;
+    --secondary: #5D5447;
+    --background: #F0F2EF;
+    --text-color: #5F5649;
+    --hovering-effect: rgba(110, 75, 47, 0.5);
+
+}
+
+body{
+    color: var(--text-color);
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Apply styles to <header> and <footer>*/
+header {
+/*The padding on the header is applying 20px to the top and bottom, then 35px to the left and right */
+    padding: 20px 35px; 
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+header h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    background-color: #A69F98;
+}
+header a {
+    text-decoration: none;
+    color: var(--background);
+/*In the above code, we are styling all <a> elements inside <header>, 
+including those in <h1> and <nav>. We used a new property here as well:*/
+}
+header nav{
+    margin: 7px 5px 5px 5px;
+}
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+header nav ul li{
+    display: inline;
+    border-bottom: 3px outset white;
+    
+}
+header nav ul li a{
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+}
+/* End of header */
+
+/* Hero */
+
+.hero{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    /*This is to add flex on the .hero element*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+section{
+    padding: 60px;
+}
+
+.border-line{/*This is to make the border line on each section*/
+    border-left: 3px solid;
+    padding-left: 50px;
+}
+
+.hero-cta{
+    width: 100%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    line-height: 1.2;
+    /* display: flex; */
+    flex-wrap: wrap;
+    font-size: 28px;
+    font-weight: bold;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* background-color: #5C5346; */
+}
+
+/* Hero end */
+
+.section-title {
+    display: inline-block;
+    font-size: 48px;
+    color: var(--text-color);
+    /*This is to add flex*/
+    padding-bottom: 20px;
+    text-align: right;
+    margin: 0 auto 35px auto;
+    width: 20%;
+    flex-wrap: unset;
+  }
+
+
+.page-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+  }
+
+
+
+.page-section div {
+    flex: 0 0 75%;
+  }
+
+
+.grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*the 1fr it equally divides it automatically */
+    grid-template-rows: repeat(3, 115px);
+    grid-gap: 10px;
+    width: 100%;
+    height: 500px;
+    grid-auto-flow: dense;
+
+  }
+  
+  
+.grid-item { 
+    align-items: center;
+    border: var(--text-color);
+    background-color: lightblue;
+  }
+  
+.box1{
+    background-image: url(../images/Run-Buddy.png);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+.box2 {
+    background-image: url(../images/image-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.box3 {
+    background-image: url(../images/image-3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.box4 {
+    background-image: url(../images/image-4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.box5 {
+    background-image: url(../images/image-5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.boxtext {
+    color: var(--primary-color);
+}
+/* When hovering the icons */
+
+.box1 a, .box2 a, .box3 a, .box4 a, .box5 a { /* This is to make the hovering effect color to work */
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+}
+
+.box1 a:hover {
+    background-color: var(--hovering-effect);
+}
+
+.box2 a:hover {
+    background-color: var(--hovering-effect);
+}
+
+.box3 a:hover {
+    background-color: var(--hovering-effect);
+}
+
+.box4 a:hover {
+    background-color: var(--hovering-effect);
+}
+
+.box5 a:hover {
+    background-color: var(--hovering-effect);
+}
+
+/* Contact */
+.spacing {
+    display: flex;
+    width: auto;
+    align-content: center;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 5px;
+}
+
+
+.spacing ul {
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.spacing ul li {
+    padding-right: 20px;
+}
+
+.spacing ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text-color);
+    border-bottom: solid;
+    padding-bottom: 5px;
+    margin-left: 20px;
+}
+
+/* Media query list start */
+
+@media only screen and (max-width:1024px) {
+    .content {
+        margin-top: 20px;
+    }
+    header {
+        align-items: center; 
+        flex-direction: column;
+        padding: 0,
+    }
+    header h1 {
+        align-items: center;
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+        
+    }
+    header nav ul {
+        margin-top: 30px;
+        justify-content: center;
+        width: 100%;
+    }
+    header nav ul li a {
+        align-items: center;
+        font-size: 2vw;
+    }
+    .container ul li a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .content {
+        margin-top: 20px;
+    }
+    header {
+        justify-content: center;
+        padding: 0,
+    }
+    header h1 {
+        align-items: center;
+        font-size: 32px;
+        margin: 0;
+        width: 100%;
+    }
+    header nav ul li a {
+        margin-bottom: 20px;
+        font-size: 4vw;
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+    .section-title {
+        display: inline-block;
+        font-size: 32px;
+        color: #465671;
+        padding: 30px 0;
+        border-right: none;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    
+    header nav {
+        height: auto;
+        margin: 0;
+    }
+    header nav ul {
+        margin-top: 0;
+        display: block;
+    }
+    header nav ul li {
+        padding: 5px;
+    }
+    header nav ul li a {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+    .bio-image {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .bio-image img {
+        width: auto;
+        height: 400px;
+    }
+    .container ul li a {
+        font-size: 15px;
+    }
+    
+    .page-section {
+        display: flow-root;
+    }
+    .section-title{
+        border-bottom: 3px solid #465671;
+    }
+    .grid-wrapper {
+        display: block;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .border-line{/*This is to make the border line on each section*/
+        border-left: none;
+        padding: 20px;
+    }
+    .spacing {
+        display: flex;
+        width: auto;
+        align-content: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: bold;
+      }
+}
+
+@media only screen and (max-width:500px){
+
+    .page-section {
+        display: flow-root;
+    }
+    .section-title{
+        border-bottom: 3px solid #465671;
+    }
+    .grid-wrapper {
+        display: block;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .border-line{/*This is to make the border line on each section*/
+        border-left: none;
+        padding: 20px;
+    }
+}
